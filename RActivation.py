@@ -1,8 +1,4 @@
-#701 (?) ,2185 (out of chromosome)-- Activation
-#475, 2757,3033,3340,4683- No target site-- Deletion
-#2185 (out of chromosome) --interference
 import csv
-
 def sorting(crrnalist,start):
 	sortedlist=[]
 	for i in range(0,len(crrnalist)):
@@ -21,9 +17,7 @@ def sorting(crrnalist,start):
 		elif dist<40:
 			b=0.6
 		else:
-			b=0.8
-
-		
+			b=0.8		
 		c=float(int(crrnalist[i][10])+int(crrnalist[i][6])+int(crrnalist[i][7])+int(crrnalist[i][8])+int(crrnalist[i][9]))/20
 		if crrnalist[i][1].find('TTTTT')>-1:
 			d=1
@@ -61,30 +55,16 @@ def sorting(crrnalist,start):
 		answer2.append(i)
 	answer2.reverse()
 	return answer2
-		
-
-
-
 with open('target.csv','r') as f:
    reader = csv.reader(f, delimiter=",")
    target = list(reader)
 a=[]
 finallist=[]
-
-
 address="activation/"+'0'+"-"+"ACS1"+"/jiazhang.txt"
 print address
 with open(address,'r') as f:
    reader = csv.reader(f, delimiter="	")
    temp = list(reader)
-
-print target[5399]
-
-
-
-
-
-
 for i in [1873]: #len(target)-1):
 	
 	if i in a:
